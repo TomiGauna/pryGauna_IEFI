@@ -12,6 +12,9 @@ namespace pryGauna_IEFI
 {
     public partial class frmLogin : Form
     {
+        frmMain mainForm = new frmMain();
+        clsDataHandler handler = new clsDataHandler();
+
         public frmLogin()
         {
             InitializeComponent();
@@ -23,7 +26,6 @@ namespace pryGauna_IEFI
             lblUsername.Text = "Username";
             lblPassword.Text = "Password";
 
-            btnLogin.Enabled = false;
             btnLogin.Text = "Login";
         }
 
@@ -38,6 +40,23 @@ namespace pryGauna_IEFI
                     MessageBoxIcon.Error
                     );
             }
+            else
+            {
+                if (handler.UserValidation(txtUsername.Text, txtPassword.Text))
+                {
+                    mainForm.Show();
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "Please enter a username or password registered",
+                        "Login Information: Wrong Data",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                        );
+                }
+            }
         }
+
     }
 }

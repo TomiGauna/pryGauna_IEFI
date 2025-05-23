@@ -76,7 +76,8 @@
             // 
             this.auditoriesToolStripMenuItem.Name = "auditoriesToolStripMenuItem";
             this.auditoriesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.auditoriesToolStripMenuItem.Text = "Auditories";
+            this.auditoriesToolStripMenuItem.Text = "Audits";
+            this.auditoriesToolStripMenuItem.Click += new System.EventHandler(this.auditoriesToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -98,7 +99,6 @@
             // tsslDate
             // 
             this.tsslDate.Name = "tsslDate";
-            this.tsslDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tsslDate.Size = new System.Drawing.Size(118, 17);
             this.tsslDate.Text = "toolStripStatusLabel1";
             // 
@@ -111,6 +111,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Form";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

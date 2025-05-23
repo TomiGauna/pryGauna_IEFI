@@ -99,6 +99,7 @@
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.txtUsername);
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGIN";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);

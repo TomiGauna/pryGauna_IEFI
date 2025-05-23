@@ -12,9 +12,16 @@ namespace pryGauna_IEFI
 {
     public partial class frmMain : Form
     {
+        frmAudit auditForm = new frmAudit();
+
         public frmMain()
         {
             InitializeComponent();
+        }
+
+        private void auditoriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            auditForm.Show();
         }
     }
 }
