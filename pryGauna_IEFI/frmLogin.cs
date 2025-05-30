@@ -12,8 +12,8 @@ namespace pryGauna_IEFI
 {
     public partial class frmLogin : Form
     {
-        frmMain mainForm = new frmMain();
         clsDataHandler handler = new clsDataHandler();
+        frmMain mainForm = new frmMain();
 
         public frmLogin()
         {
@@ -34,8 +34,8 @@ namespace pryGauna_IEFI
             if (txtUsername.Text == "" || txtPassword.Text == "")
             {
                 MessageBox.Show(
-                    "Please enter data correctly", 
-                    "Login Information",
+                    "Both fields are required", 
+                    "Login Information: Unfilled Fields",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                     );
@@ -44,12 +44,14 @@ namespace pryGauna_IEFI
             {
                 if (handler.UserValidation(txtUsername.Text, txtPassword.Text))
                 {
+                    handler.Connection.Open();
+                    mainForm.SetLabels(txtUsername.Text, DateTime.Now.ToShortDateString());
                     mainForm.Show();
                 }
                 else
                 {
                     MessageBox.Show(
-                        "Please enter a username or password registered",
+                        "Incorrect username or password. Please enter a valid username or password",
                         "Login Information: Wrong Data",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error
