@@ -34,6 +34,8 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.lblSignUp = new System.Windows.Forms.Label();
+            this.lblRegisterHere = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -46,7 +48,7 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(23, 50);
+            this.lblUsername.Location = new System.Drawing.Point(26, 50);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(35, 13);
             this.lblUsername.TabIndex = 1;
@@ -87,11 +89,35 @@
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Text = "label3";
             // 
+            // lblSignUp
+            // 
+            this.lblSignUp.AutoSize = true;
+            this.lblSignUp.Location = new System.Drawing.Point(26, 225);
+            this.lblSignUp.Name = "lblSignUp";
+            this.lblSignUp.Size = new System.Drawing.Size(35, 13);
+            this.lblSignUp.TabIndex = 6;
+            this.lblSignUp.Text = "label1";
+            // 
+            // lblRegisterHere
+            // 
+            this.lblRegisterHere.AutoSize = true;
+            this.lblRegisterHere.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblRegisterHere.Location = new System.Drawing.Point(197, 225);
+            this.lblRegisterHere.Name = "lblRegisterHere";
+            this.lblRegisterHere.Size = new System.Drawing.Size(35, 13);
+            this.lblRegisterHere.TabIndex = 7;
+            this.lblRegisterHere.Text = "label1";
+            this.lblRegisterHere.Click += new System.EventHandler(this.lblRegisterHere_Click);
+            this.lblRegisterHere.MouseEnter += new System.EventHandler(this.lblRegisterHere_MouseEnter);
+            this.lblRegisterHere.MouseLeave += new System.EventHandler(this.lblRegisterHere_MouseLeave);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 232);
+            this.ClientSize = new System.Drawing.Size(398, 259);
+            this.Controls.Add(this.lblRegisterHere);
+            this.Controls.Add(this.lblSignUp);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
@@ -115,6 +141,8 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblSignUp;
+        private System.Windows.Forms.Label lblRegisterHere;
     }
 }
 

@@ -46,7 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsAuditManager.cs" />
+    <Compile Include="clsConnection.cs" />
     <Compile Include="clsDataHandler.cs" />
+    <Compile Include="clsUsersManager.cs" />
     <Compile Include="frmAudit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +68,18 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSignup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSignup.Designer.cs">
+      <DependentUpon>frmSignup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsersInfos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsersInfos.Designer.cs">
+      <DependentUpon>frmUsersInfos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAudit.resx">
@@ -75,6 +90,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSignup.resx">
+      <DependentUpon>frmSignup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsersInfos.resx">
+      <DependentUpon>frmUsersInfos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

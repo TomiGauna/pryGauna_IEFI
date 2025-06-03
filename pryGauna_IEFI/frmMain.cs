@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,13 +13,18 @@ namespace pryGauna_IEFI
 {
     public partial class frmMain : Form
     {
-        frmAudit auditForm = new frmAudit();
-        clsDataHandler handler = new clsDataHandler();
+        SqlConnection conn = new clsConnection().GetConnection();
+        clsAuditManager auditManager = new clsAuditManager();
+        frmAudit auditForm;
+        frmUsersInfos infoForm;
         DateTime loginTime;
 
         public frmMain()
         {
             InitializeComponent();
+            conn.Open();
+            auditForm = new frmAudit(conn);
+            infoForm = new frmUsersInfos(conn);
         }
 
         private void auditoriesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -41,10 +47,15 @@ namespace pryGauna_IEFI
         private void btnLogout_Click(object sender, EventArgs e)
         {
             DateTime closingTime = DateTime.Now;
-            handler.RegisterTimes(tsslUser.Text, loginTime, closingTime);
+            auditManager.AddAuditInfo(tsslUser.Text, loginTime, closingTime, conn);
             auditForm.Close();
             this.Close();
-            //handler.Connection.Close();
+            conn.Close();
+        }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            infoForm.Show();
         }
     }
 }

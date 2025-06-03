@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,10 +13,14 @@ namespace pryGauna_IEFI
 {
     public partial class frmAudit : Form
     {
-        clsDataHandler handler = new clsDataHandler();
-        public frmAudit()
+        clsAuditManager auditManager = new clsAuditManager();
+        clsUsersManager usersManager = new clsUsersManager();
+        SqlConnection conn;
+
+        public frmAudit(SqlConnection connection)
         {
             InitializeComponent();
+            conn = connection;
         }
 
         private void frmAudit_Load(object sender, EventArgs e)
@@ -39,7 +44,8 @@ namespace pryGauna_IEFI
             cboUsers.Enabled = false;
             cboUsers.DisplayMember = "Id";
             cboUsers.ValueMember = "Id";
-            cboUsers.DataSource = handler.DataSet.Tables["Users"];
+            cboUsers.DataSource = usersManager.GetAllUsersSystemInfo(conn);
+            cboUsers.SelectedIndex = -1;
         }
 
         private void cboCriterion_SelectedIndexChanged(object sender, EventArgs e)
@@ -67,24 +73,25 @@ namespace pryGauna_IEFI
             }
             else
             {
+                DataTable table = new DataTable();
                 if (cboCriterion.SelectedIndex == 1)
                 {
                     dgvUserInfo.Rows.Clear();
 
-                    List<DataRow> list = handler.SearchByUser(cboUsers.SelectedIndex + 1);
-                    foreach (DataRow row in list)
+                    table = auditManager.GetOneUserInfo(cboUsers.SelectedIndex + 1, conn);
+                    foreach (DataRow row in table.Rows)
                     {
-                        dgvUserInfo.Rows.Add(row[0], row[2], row[3]);
+                        dgvUserInfo.Rows.Add(row[1], row[0], row[3]);
                     }
                 }
                 else
                 {
                     dgvUserInfo.Rows.Clear();
 
-                    List<DataRow> list = handler.SearchAllOfThem();
-                    foreach (DataRow row in list)
+                    table = auditManager.GetAllUsersAuditInfo(conn);
+                    foreach (DataRow row in table.Rows)
                     {
-                        dgvUserInfo.Rows.Add(row[0], row[2], row[3]);
+                        dgvUserInfo.Rows.Add(row[1], row[0], row[3]);
                     }
                 }
             }
