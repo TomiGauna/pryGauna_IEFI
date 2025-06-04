@@ -37,6 +37,8 @@
             this.tsslUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.updateUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +56,9 @@
             // 
             // tasksToolStripMenuItem
             // 
+            this.tasksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updateUserToolStripMenuItem,
+            this.deleteUserToolStripMenuItem});
             this.tasksToolStripMenuItem.Name = "tasksToolStripMenuItem";
             this.tasksToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.tasksToolStripMenuItem.Text = "Tasks";
@@ -70,14 +75,14 @@
             // usersToolStripMenuItem
             // 
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.usersToolStripMenuItem.Text = "Users";
             this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
             // 
             // auditoriesToolStripMenuItem
             // 
             this.auditoriesToolStripMenuItem.Name = "auditoriesToolStripMenuItem";
-            this.auditoriesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.auditoriesToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.auditoriesToolStripMenuItem.Text = "Audits";
             this.auditoriesToolStripMenuItem.Click += new System.EventHandler(this.auditoriesToolStripMenuItem_Click);
             // 
@@ -116,6 +121,20 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // updateUserToolStripMenuItem
+            // 
+            this.updateUserToolStripMenuItem.Name = "updateUserToolStripMenuItem";
+            this.updateUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateUserToolStripMenuItem.Text = "Update User";
+            this.updateUserToolStripMenuItem.Click += new System.EventHandler(this.updateUserToolStripMenuItem_Click);
+            // 
+            // deleteUserToolStripMenuItem
+            // 
+            this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
+            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteUserToolStripMenuItem.Text = "Delete User";
+            this.deleteUserToolStripMenuItem.Click += new System.EventHandler(this.deleteUserToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,5 +168,7 @@
         private System.Windows.Forms.ToolStripStatusLabel tsslUser;
         private System.Windows.Forms.ToolStripStatusLabel tsslDate;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.ToolStripMenuItem updateUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteUserToolStripMenuItem;
     }
 }

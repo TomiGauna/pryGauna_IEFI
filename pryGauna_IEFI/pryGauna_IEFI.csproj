@@ -56,6 +56,12 @@
     <Compile Include="frmAudit.Designer.cs">
       <DependentUpon>frmAudit.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDelete.Designer.cs">
+      <DependentUpon>frmDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,12 @@
     <Compile Include="frmSignup.Designer.cs">
       <DependentUpon>frmSignup.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdate.Designer.cs">
+      <DependentUpon>frmUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUsersInfos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +97,9 @@
     <EmbeddedResource Include="frmAudit.resx">
       <DependentUpon>frmAudit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDelete.resx">
+      <DependentUpon>frmDelete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSignup.resx">
       <DependentUpon>frmSignup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdate.resx">
+      <DependentUpon>frmUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsersInfos.resx">
       <DependentUpon>frmUsersInfos.cs</DependentUpon>

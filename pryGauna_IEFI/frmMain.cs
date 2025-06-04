@@ -17,6 +17,8 @@ namespace pryGauna_IEFI
         clsAuditManager auditManager = new clsAuditManager();
         frmAudit auditForm;
         frmUsersInfos infoForm;
+        frmUpdate updateForm;
+        frmDelete deleteForm;
         DateTime loginTime;
 
         public frmMain()
@@ -25,6 +27,8 @@ namespace pryGauna_IEFI
             conn.Open();
             auditForm = new frmAudit(conn);
             infoForm = new frmUsersInfos(conn);
+            updateForm = new frmUpdate(conn);
+            deleteForm = new frmDelete(conn);
         }
 
         private void auditoriesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -56,6 +60,16 @@ namespace pryGauna_IEFI
         private void usersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             infoForm.Show();
+        }
+
+        private void updateUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            updateForm.Show();
+        }
+
+        private void deleteUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            deleteForm.Show();
         }
     }
 }

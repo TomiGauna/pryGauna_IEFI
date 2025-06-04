@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Text.RegularExpressions;
 
 namespace pryGauna_IEFI
 {
@@ -34,8 +35,8 @@ namespace pryGauna_IEFI
             {
                 string query = $"INSERT INTO Users (Id, LastName, FirstName, Username, Password, Age, Email, Country, PhoneNumber, Role) VALUES (@Id, @LastName, @FirstName, @Username, @Password, @Age, @Email, @Country, @PhoneNumber, @Role)";
 
-                DataTable table = GetAllUsersSystemInfo(connection);
-                int id = table.Rows.Count + 1;
+                DataTable usersTable = GetAllUsersSystemInfo(connection);
+                int id = usersTable.Rows.Count + 1;
 
                 command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Id", id);
@@ -48,6 +49,7 @@ namespace pryGauna_IEFI
                 command.Parameters.AddWithValue("@Country", country);
                 command.Parameters.AddWithValue("@PhoneNumber", phNumber);
                 command.Parameters.AddWithValue("@Role", "User");
+                command.ExecuteNonQuery();
 
                 MessageBox.Show(
                     "User created succesfully",
@@ -71,6 +73,7 @@ namespace pryGauna_IEFI
         {
             try
             {
+                string modifiedField = CleanWhiteSpaces(field);
                 string query = $"UPDATE Users SET {field} = @valor WHERE Username = @username";
                 command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@valor", value);
@@ -203,6 +206,11 @@ namespace pryGauna_IEFI
                 }
             }
             return flag;
+        }
+
+        public string CleanWhiteSpaces(string field)
+        {
+            return Regex.Replace(field, @"\s+", "");
         }
     }
 }

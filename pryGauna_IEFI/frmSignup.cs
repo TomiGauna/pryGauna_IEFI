@@ -20,6 +20,7 @@ namespace pryGauna_IEFI
         {
             InitializeComponent();
             conn = connectionFromLogin;
+            conn.Open();
         }
 
         private void frmSignup_Load(object sender, EventArgs e)
@@ -38,21 +39,70 @@ namespace pryGauna_IEFI
             btnSignUp.Text = "Sign Up";
 
             txtPassword.UseSystemPasswordChar = true;
+
+            cboCountry.Items.Clear();
+            cboCountry.Items.Add("Argentina");
+            cboCountry.Items.Add("México");
+            cboCountry.Items.Add("Bolivia");
+            cboCountry.Items.Add("Perú");
+            cboCountry.Items.Add("Paraguay");
+            cboCountry.Items.Add("Uruguay");
+            cboCountry.Items.Add("Brasil");
+            cboCountry.Items.Add("Colombia");
+            cboCountry.Items.Add("El Salvador");
+            cboCountry.Items.Add("Venezuela");
+            cboCountry.Items.Add("Chile");
+            cboCountry.Items.Add("Ecuador");
+            cboCountry.Items.Add("España");
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            userManager.CreateUser(
-                txtLastName.Text,
-                txtFirstName.Text,
-                txtUsername.Text,
-                txtPassword.Text,
-                int.Parse(txtAge.Text),
-                txtEmail.Text,
-                cboCountry.Text,
-                int.Parse(txtPhNumber.Text),
-                conn
-                );
+            if(
+                txtFirstName.Text == "" ||
+                txtLastName.Text == "" ||
+                txtEmail.Text == "" ||
+                txtPhNumber.Text == "" ||
+                txtUsername.Text == "" ||
+                txtPassword.Text == "" ||
+                txtAge.Text == "" ||
+                cboCountry.SelectedIndex == -1
+                )
+            {
+                MessageBox.Show(
+                    "All fields are required",
+                    "Sign Up Information: Empty Fields",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                    );
+            }
+            else
+            {
+                if (userManager.UserValidation(txtUsername.Text, conn))
+                {
+                    MessageBox.Show(
+                    "Username already registered. Please choose another username",
+                    "Sign Up Information: Existent User",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                    );
+                }
+                else
+                {
+                    userManager.CreateUser(
+                    txtLastName.Text,
+                    txtFirstName.Text,
+                    txtUsername.Text,
+                    txtPassword.Text,
+                    int.Parse(txtAge.Text),
+                    txtEmail.Text,
+                    cboCountry.Text,
+                    int.Parse(txtPhNumber.Text),
+                    conn
+                    );
+                }
+                
+            }        
 
             txtLastName.Text = string.Empty;
             txtFirstName.Text = string.Empty;
