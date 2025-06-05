@@ -62,7 +62,7 @@ namespace pryGauna_IEFI
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (cboCriterion.SelectedIndex == -1 || cboUsers.SelectedIndex == -1)
+            if (cboCriterion.SelectedIndex == -1)
             {
                 MessageBox.Show(
                     "Please choose a criterion and/or an user for search",
@@ -73,6 +73,15 @@ namespace pryGauna_IEFI
             }
             else
             {
+                if (cboCriterion.SelectedIndex == 1 && cboUsers.SelectedIndex == -1) 
+                {
+                    MessageBox.Show(
+                        "You must choose a user",
+                        "Audit Information: Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                        );
+                }
                 DataTable table = new DataTable();
                 if (cboCriterion.SelectedIndex == 1)
                 {
