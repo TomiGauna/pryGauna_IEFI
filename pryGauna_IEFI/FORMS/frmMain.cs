@@ -15,6 +15,7 @@ namespace pryGauna_IEFI
     {
         SqlConnection conn = new clsConnection().GetConnection();
         clsAuditManager auditManager = new clsAuditManager();
+        clsUsersManager userMgr = new clsUsersManager();
         frmAudit auditForm;
         frmUsersInfos infoForm;
         frmUpdate updateForm;
@@ -40,6 +41,17 @@ namespace pryGauna_IEFI
         {
             btnLogout.Text = "Log Out";
             loginTime = DateTime.Now;
+
+            if (RoleValidation(tsslUser.Text) == "User")
+            {
+                updateUserToolStripMenuItem.Enabled = false;
+                deleteUserToolStripMenuItem.Enabled = false;
+            }
+            else
+            {
+                updateUserToolStripMenuItem.Enabled = true;
+                deleteUserToolStripMenuItem.Enabled = true;
+            }
         }
 
         public void SetLabels(string username, string date)
@@ -70,6 +82,22 @@ namespace pryGauna_IEFI
         private void deleteUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             deleteForm.Show();
+        }
+
+        public string RoleValidation(string username)
+        {
+            DataTable users = userMgr.GetAllUsersSystemInfo(conn);
+            string role = null;
+
+            foreach (DataRow userRow in users.Rows)
+            {
+                if (userRow["Username"].ToString() == username)
+                {
+                    role = userRow["Role"].ToString();
+                    break;
+                }
+            }
+            return role;
         }
     }
 }

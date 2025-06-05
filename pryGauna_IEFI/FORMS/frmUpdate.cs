@@ -123,6 +123,11 @@ namespace pryGauna_IEFI
                         );
                 }
             }
+            cboUsername.DataSource = userMgr.GetAllUsersSystemInfo(conn);
+            cboUsername.SelectedIndex = -1;
+            cboField.SelectedIndex = -1;
+            cboNewCountry.SelectedIndex = -1;
+            txtNewData.Text = string.Empty;
         }
     }
 }

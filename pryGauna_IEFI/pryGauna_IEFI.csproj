@@ -46,73 +46,73 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsAuditManager.cs" />
-    <Compile Include="clsConnection.cs" />
-    <Compile Include="clsDataHandler.cs" />
-    <Compile Include="clsUsersManager.cs" />
-    <Compile Include="frmAudit.cs">
+    <Compile Include="SQL MANAGEMENT\clsAuditManager.cs" />
+    <Compile Include="SQL MANAGEMENT\clsConnection.cs" />
+    <Compile Include="ACCESS MANAGEMENT\clsDataHandler.cs" />
+    <Compile Include="SQL MANAGEMENT\clsUsersManager.cs" />
+    <Compile Include="FORMS\frmAudit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAudit.Designer.cs">
+    <Compile Include="FORMS\frmAudit.Designer.cs">
       <DependentUpon>frmAudit.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDelete.cs">
+    <Compile Include="FORMS\frmDelete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDelete.Designer.cs">
+    <Compile Include="FORMS\frmDelete.Designer.cs">
       <DependentUpon>frmDelete.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="FORMS\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="FORMS\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="FORMS\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
+    <Compile Include="FORMS\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSignup.cs">
+    <Compile Include="FORMS\frmSignup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSignup.Designer.cs">
+    <Compile Include="FORMS\frmSignup.Designer.cs">
       <DependentUpon>frmSignup.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUpdate.cs">
+    <Compile Include="FORMS\frmUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUpdate.Designer.cs">
+    <Compile Include="FORMS\frmUpdate.Designer.cs">
       <DependentUpon>frmUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUsersInfos.cs">
+    <Compile Include="FORMS\frmUsersInfos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUsersInfos.Designer.cs">
+    <Compile Include="FORMS\frmUsersInfos.Designer.cs">
       <DependentUpon>frmUsersInfos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAudit.resx">
+    <EmbeddedResource Include="FORMS\frmAudit.resx">
       <DependentUpon>frmAudit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDelete.resx">
+    <EmbeddedResource Include="FORMS\frmDelete.resx">
       <DependentUpon>frmDelete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="FORMS\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
+    <EmbeddedResource Include="FORMS\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSignup.resx">
+    <EmbeddedResource Include="FORMS\frmSignup.resx">
       <DependentUpon>frmSignup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUpdate.resx">
+    <EmbeddedResource Include="FORMS\frmUpdate.resx">
       <DependentUpon>frmUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUsersInfos.resx">
+    <EmbeddedResource Include="FORMS\frmUsersInfos.resx">
       <DependentUpon>frmUsersInfos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -137,5 +137,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

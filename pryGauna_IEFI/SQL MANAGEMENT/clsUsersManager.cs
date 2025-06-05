@@ -73,8 +73,17 @@ namespace pryGauna_IEFI
         {
             try
             {
+                if (field == "Username")
+                {
+                    if (UserValidation(value, connection))
+                    {
+                        throw new Exception(
+                            "Username already registered. Please choose another username"
+                            );
+                    }
+                }
                 string modifiedField = CleanWhiteSpaces(field);
-                string query = $"UPDATE Users SET {field} = @valor WHERE Username = @username";
+                string query = $"UPDATE Users SET [{modifiedField}] = @valor WHERE Username = @username";
                 command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@valor", value);
                 command.Parameters.AddWithValue("@username", username);
