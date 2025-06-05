@@ -64,6 +64,7 @@
             // 
             // cboUsername
             // 
+            this.cboUsername.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboUsername.FormattingEnabled = true;
             this.cboUsername.Location = new System.Drawing.Point(32, 91);
             this.cboUsername.Name = "cboUsername";

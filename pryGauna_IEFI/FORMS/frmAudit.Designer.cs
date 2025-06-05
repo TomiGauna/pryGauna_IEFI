@@ -57,6 +57,7 @@
             // 
             // cboCriterion
             // 
+            this.cboCriterion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCriterion.FormattingEnabled = true;
             this.cboCriterion.Location = new System.Drawing.Point(12, 38);
             this.cboCriterion.Name = "cboCriterion";
@@ -75,6 +76,7 @@
             // 
             // cboUsers
             // 
+            this.cboUsers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboUsers.FormattingEnabled = true;
             this.cboUsers.Location = new System.Drawing.Point(12, 84);
             this.cboUsers.Name = "cboUsers";

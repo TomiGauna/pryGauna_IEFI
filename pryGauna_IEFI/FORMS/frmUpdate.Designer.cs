@@ -70,6 +70,7 @@
             // 
             // cboUsername
             // 
+            this.cboUsername.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboUsername.FormattingEnabled = true;
             this.cboUsername.Location = new System.Drawing.Point(30, 77);
             this.cboUsername.Name = "cboUsername";
@@ -103,6 +104,7 @@
             // 
             // cboNewCountry
             // 
+            this.cboNewCountry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboNewCountry.FormattingEnabled = true;
             this.cboNewCountry.Location = new System.Drawing.Point(30, 240);
             this.cboNewCountry.Name = "cboNewCountry";
@@ -120,6 +122,7 @@
             // 
             // cboField
             // 
+            this.cboField.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboField.FormattingEnabled = true;
             this.cboField.Location = new System.Drawing.Point(30, 133);
             this.cboField.Name = "cboField";
