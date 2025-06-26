@@ -34,6 +34,8 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.cboUsers = new System.Windows.Forms.ComboBox();
             this.lblChooseUser = new System.Windows.Forms.Label();
+            this.lblTotalTimeTitle = new System.Windows.Forms.Label();
+            this.lblTotalTime = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +44,7 @@
             this.dgvUserInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUserInfo.Location = new System.Drawing.Point(12, 150);
             this.dgvUserInfo.Name = "dgvUserInfo";
-            this.dgvUserInfo.Size = new System.Drawing.Size(776, 288);
+            this.dgvUserInfo.Size = new System.Drawing.Size(444, 288);
             this.dgvUserInfo.TabIndex = 0;
             // 
             // btnSearch
@@ -92,11 +94,31 @@
             this.lblChooseUser.TabIndex = 5;
             this.lblChooseUser.Text = "label1";
             // 
+            // lblTotalTimeTitle
+            // 
+            this.lblTotalTimeTitle.AutoSize = true;
+            this.lblTotalTimeTitle.Location = new System.Drawing.Point(16, 445);
+            this.lblTotalTimeTitle.Name = "lblTotalTimeTitle";
+            this.lblTotalTimeTitle.Size = new System.Drawing.Size(35, 13);
+            this.lblTotalTimeTitle.TabIndex = 6;
+            this.lblTotalTimeTitle.Text = "label1";
+            // 
+            // lblTotalTime
+            // 
+            this.lblTotalTime.AutoSize = true;
+            this.lblTotalTime.Location = new System.Drawing.Point(71, 445);
+            this.lblTotalTime.Name = "lblTotalTime";
+            this.lblTotalTime.Size = new System.Drawing.Size(35, 13);
+            this.lblTotalTime.TabIndex = 7;
+            this.lblTotalTime.Text = "label2";
+            // 
             // frmAudit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 446);
+            this.ClientSize = new System.Drawing.Size(473, 470);
+            this.Controls.Add(this.lblTotalTime);
+            this.Controls.Add(this.lblTotalTimeTitle);
             this.Controls.Add(this.lblChooseUser);
             this.Controls.Add(this.cboUsers);
             this.Controls.Add(this.lblSearch);
@@ -121,5 +143,7 @@
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.ComboBox cboUsers;
         private System.Windows.Forms.Label lblChooseUser;
+        private System.Windows.Forms.Label lblTotalTimeTitle;
+        private System.Windows.Forms.Label lblTotalTime;
     }
 }

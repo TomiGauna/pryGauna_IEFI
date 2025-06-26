@@ -66,7 +66,6 @@ namespace pryGauna_IEFI
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information
                     );
-                Console.WriteLine(conn.State);
 
             }
             catch (Exception ex)

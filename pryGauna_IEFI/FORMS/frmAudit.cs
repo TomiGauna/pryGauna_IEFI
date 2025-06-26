@@ -34,6 +34,8 @@ namespace pryGauna_IEFI
 
             lblSearch.Text = "Pick a search criterion";
             lblChooseUser.Text = "Choose an user";
+            lblTotalTimeTitle.Text = "Total Time: ";
+            lblTotalTime.Text = "";
 
             btnSearch.Text = "Search";
 
@@ -83,6 +85,7 @@ namespace pryGauna_IEFI
                         );
                 }
                 DataTable table = new DataTable();
+                double totalTime = 0;
                 if (cboCriterion.SelectedIndex == 1)
                 {
                     dgvUserInfo.Rows.Clear();
@@ -91,7 +94,9 @@ namespace pryGauna_IEFI
                     foreach (DataRow row in table.Rows)
                     {
                         dgvUserInfo.Rows.Add(row[1], row[0], row[3]);
+                        totalTime = totalTime + Math.Round(double.Parse(row[3].ToString()), 2);
                     }
+                    lblTotalTime.Text = totalTime.ToString();
                 }
                 else
                 {
@@ -101,7 +106,9 @@ namespace pryGauna_IEFI
                     foreach (DataRow row in table.Rows)
                     {
                         dgvUserInfo.Rows.Add(row[1], row[0], row[3]);
+                        totalTime = totalTime + Math.Round(double.Parse(row[3].ToString()), 2);
                     }
+                    lblTotalTime.Text = totalTime.ToString();
                 }
             }
         }
