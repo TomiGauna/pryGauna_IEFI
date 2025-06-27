@@ -20,7 +20,6 @@ namespace pryGauna_IEFI
         {
             InitializeComponent();
             conn = connectionFromLogin;
-            conn.Open();
         }
 
         private void frmSignup_Load(object sender, EventArgs e)
@@ -33,12 +32,17 @@ namespace pryGauna_IEFI
             lblPhoneNumber.Text = "Phone Number";
             lblAge.Text = "Age";
             lblCountry.Text = "Country";
+            lblRole.Text = "Role";
             lblAccountInfoTitle.Text = "Account Information";
             lblUsername.Text = "Username";
             lblPassword.Text = "Password";
             btnSignUp.Text = "Sign Up";
 
             txtPassword.UseSystemPasswordChar = true;
+
+            cboRole.Items.Clear();
+            cboRole.Items.Add("Admin");
+            cboRole.Items.Add("User");
 
             cboCountry.Items.Clear();
             cboCountry.Items.Add("Argentina");
@@ -98,6 +102,7 @@ namespace pryGauna_IEFI
                     txtEmail.Text,
                     cboCountry.Text,
                     int.Parse(txtPhNumber.Text),
+                    cboRole.Text,
                     conn
                     );
                 }
@@ -112,6 +117,7 @@ namespace pryGauna_IEFI
             txtAge.Text = string.Empty;
             txtPhNumber.Text = string.Empty;
             cboCountry.SelectedIndex = -1;
+            cboRole.SelectedIndex = -1;
         }
     }
 }

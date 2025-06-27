@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsersInfos));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpaSystemInfo = new System.Windows.Forms.TabPage();
             this.dgvSystemInfo = new System.Windows.Forms.DataGridView();
@@ -65,6 +66,7 @@
             // 
             // dgvSystemInfo
             // 
+            this.dgvSystemInfo.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
             this.dgvSystemInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSystemInfo.Location = new System.Drawing.Point(8, 11);
             this.dgvSystemInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -75,11 +77,11 @@
             // tpaPersonalInfo
             // 
             this.tpaPersonalInfo.Controls.Add(this.dgvPersonalInfo);
-            this.tpaPersonalInfo.Location = new System.Drawing.Point(4, 22);
+            this.tpaPersonalInfo.Location = new System.Drawing.Point(4, 30);
             this.tpaPersonalInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tpaPersonalInfo.Name = "tpaPersonalInfo";
             this.tpaPersonalInfo.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tpaPersonalInfo.Size = new System.Drawing.Size(720, 662);
+            this.tpaPersonalInfo.Size = new System.Drawing.Size(720, 654);
             this.tpaPersonalInfo.TabIndex = 1;
             this.tpaPersonalInfo.Text = "tabPage2";
             this.tpaPersonalInfo.UseVisualStyleBackColor = true;
@@ -103,6 +105,7 @@
             this.ClientSize = new System.Drawing.Size(754, 727);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Sitka Banner", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmUsersInfos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

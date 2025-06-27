@@ -63,49 +63,9 @@ namespace pryGauna_IEFI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap coffee_1276784_640 {
-            get {
-                object obj = ResourceManager.GetObject("coffee-1276784_640", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap juzzepo_vcee2hRsjl0_unsplash {
-            get {
-                object obj = ResourceManager.GetObject("juzzepo-vcee2hRsjl0-unsplash", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap leone_venter_VieM9BdZKFo_unsplash {
-            get {
-                object obj = ResourceManager.GetObject("leone-venter-VieM9BdZKFo-unsplash", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap mario_gogh_VBLHICVh_lI_unsplash {
             get {
                 object obj = ResourceManager.GetObject("mario-gogh-VBLHICVh-lI-unsplash", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap nrd_c3tNiAb098I_unsplash {
-            get {
-                object obj = ResourceManager.GetObject("nrd-c3tNiAb098I-unsplash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,39 +83,9 @@ namespace pryGauna_IEFI.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pexels_kindelmedia_7054734 {
-            get {
-                object obj = ResourceManager.GetObject("pexels-kindelmedia-7054734", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap pexels_luna_lovegood_4087272 {
             get {
                 object obj = ResourceManager.GetObject("pexels-luna-lovegood-4087272", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pexels_marceloverfe_14513839 {
-            get {
-                object obj = ResourceManager.GetObject("pexels-marceloverfe-14513839", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pexels_pixabay_434337__1_ {
-            get {
-                object obj = ResourceManager.GetObject("pexels-pixabay-434337 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

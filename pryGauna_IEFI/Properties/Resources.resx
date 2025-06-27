@@ -121,31 +121,10 @@
   <data name="pexels-luna-lovegood-4087272" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\pexels-luna-lovegood-4087272.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pexels-pixabay-434337 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\pexels-pixabay-434337 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nrd-c3tNiAb098I-unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\nrd-c3tNiAb098I-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pexels-kindelmedia-7054734" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\pexels-kindelmedia-7054734.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pexels-marceloverfe-14513839" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\pexels-marceloverfe-14513839.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="mario-gogh-VBLHICVh-lI-unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\mario-gogh-VBLHICVh-lI-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="coffee-1276784_640" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\coffee-1276784_640.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="juzzepo-vcee2hRsjl0-unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\juzzepo-vcee2hRsjl0-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="patrick-tomasso-gMes5dNykus-unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\patrick-tomasso-gMes5dNykus-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="leone-venter-VieM9BdZKFo-unsplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\leone-venter-VieM9BdZKFo-unsplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

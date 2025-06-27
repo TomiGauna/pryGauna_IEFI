@@ -15,7 +15,6 @@ namespace pryGauna_IEFI
     internal class clsUsersManager
     {
 
-        //SqlConnection connection = new clsConnection().GetConnection();
         SqlCommand command;
         SqlDataAdapter da;
 
@@ -28,6 +27,7 @@ namespace pryGauna_IEFI
             string email,
             string country,
             int phNumber,
+            string role,
             SqlConnection connection
             )
         {
@@ -48,7 +48,7 @@ namespace pryGauna_IEFI
                 command.Parameters.AddWithValue("@Email", email);
                 command.Parameters.AddWithValue("@Country", country);
                 command.Parameters.AddWithValue("@PhoneNumber", phNumber);
-                command.Parameters.AddWithValue("@Role", "User");
+                command.Parameters.AddWithValue("@Role", role);
                 command.ExecuteNonQuery();
 
                 MessageBox.Show(

@@ -23,9 +23,6 @@ namespace pryGauna_IEFI
         public frmLogin()
         {
             InitializeComponent();
-            initialFont = lblRegisterHere.Font;
-            lblRegisterHere.MouseEnter += lblRegisterHere_MouseEnter;
-            lblRegisterHere.MouseLeave += lblRegisterHere_MouseLeave;
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -35,8 +32,6 @@ namespace pryGauna_IEFI
             lblTitle.Text = "LOGIN";
             lblUsername.Text = "Username";
             lblPassword.Text = "Password";
-            lblSignUp.Text = "Don't you have an account yet? → ";
-            lblRegisterHere.Text = "Register Here";
 
             btnLogin.Text = "Login";
 
@@ -79,17 +74,6 @@ namespace pryGauna_IEFI
         {
             SignupForm = new frmSignup(loginConn);
             SignupForm.Show();
-        }
-
-        private void lblRegisterHere_MouseEnter(object sender, EventArgs e)
-        {
-            lblRegisterHere.Font = new Font(lblRegisterHere.Font, FontStyle.Underline);
-        }
-
-        private void lblRegisterHere_MouseLeave(object sender, EventArgs e)
-        {
-            lblRegisterHere.Font = initialFont;
-
         }
     }
 }

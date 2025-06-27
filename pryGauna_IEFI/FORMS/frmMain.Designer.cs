@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.tasksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.managementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auditoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,7 +63,8 @@
             // 
             this.tasksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.updateUserToolStripMenuItem,
-            this.deleteUserToolStripMenuItem});
+            this.deleteUserToolStripMenuItem,
+            this.createUserToolStripMenuItem});
             this.tasksToolStripMenuItem.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tasksToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.tasksToolStripMenuItem.Name = "tasksToolStripMenuItem";
@@ -73,7 +76,7 @@
             this.updateUserToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.updateUserToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.updateUserToolStripMenuItem.Name = "updateUserToolStripMenuItem";
-            this.updateUserToolStripMenuItem.Size = new System.Drawing.Size(174, 32);
+            this.updateUserToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
             this.updateUserToolStripMenuItem.Text = "Update User";
             this.updateUserToolStripMenuItem.Click += new System.EventHandler(this.updateUserToolStripMenuItem_Click);
             // 
@@ -82,9 +85,18 @@
             this.deleteUserToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.deleteUserToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
-            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(174, 32);
+            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
             this.deleteUserToolStripMenuItem.Text = "Delete User";
             this.deleteUserToolStripMenuItem.Click += new System.EventHandler(this.deleteUserToolStripMenuItem_Click);
+            // 
+            // createUserToolStripMenuItem
+            // 
+            this.createUserToolStripMenuItem.BackColor = System.Drawing.SystemColors.Window;
+            this.createUserToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.createUserToolStripMenuItem.Name = "createUserToolStripMenuItem";
+            this.createUserToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
+            this.createUserToolStripMenuItem.Text = "Create User";
+            this.createUserToolStripMenuItem.Click += new System.EventHandler(this.createUserToolStripMenuItem_Click);
             // 
             // managementToolStripMenuItem
             // 
@@ -182,10 +194,11 @@
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.msMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Welcome Dashboard";
+            this.Text = "Deskly: Welcome Dashboard";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
@@ -210,5 +223,6 @@
         private System.Windows.Forms.ToolStripMenuItem updateUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteUserToolStripMenuItem;
         private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.ToolStripMenuItem createUserToolStripMenuItem;
     }
 }

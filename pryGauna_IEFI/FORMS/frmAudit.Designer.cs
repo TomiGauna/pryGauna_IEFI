@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAudit));
             this.dgvUserInfo = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
             this.cboCriterion = new System.Windows.Forms.ComboBox();
@@ -148,6 +149,7 @@
             this.Controls.Add(this.cboCriterion);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dgvUserInfo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAudit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Deskly: Audit";

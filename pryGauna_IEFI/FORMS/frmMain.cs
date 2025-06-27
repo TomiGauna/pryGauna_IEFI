@@ -20,6 +20,7 @@ namespace pryGauna_IEFI
         frmUsersInfos infoForm;
         frmUpdate updateForm;
         frmDelete deleteForm;
+        frmSignup createForm;
         DateTime loginTime;
 
         public frmMain()
@@ -44,11 +45,13 @@ namespace pryGauna_IEFI
             {
                 updateUserToolStripMenuItem.Enabled = false;
                 deleteUserToolStripMenuItem.Enabled = false;
+                createUserToolStripMenuItem.Enabled = false;
             }
             else
             {
                 updateUserToolStripMenuItem.Enabled = true;
                 deleteUserToolStripMenuItem.Enabled = true;
+                createUserToolStripMenuItem.Enabled = true;
             }
         }
 
@@ -83,6 +86,12 @@ namespace pryGauna_IEFI
         {
             deleteForm = new frmDelete(conn);
             deleteForm.Show();
+        }
+
+        private void createUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            createForm = new frmSignup(conn);
+            createForm.Show();
         }
 
         public string RoleValidation(string username)

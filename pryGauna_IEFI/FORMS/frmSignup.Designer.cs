@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignup));
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
@@ -48,6 +49,8 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnSignUp = new System.Windows.Forms.Button();
+            this.cboRole = new System.Windows.Forms.ComboBox();
+            this.lblRole = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -142,6 +145,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(417, 24);
             this.txtEmail.TabIndex = 7;
+            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblPhoneNumber
             // 
@@ -172,7 +176,7 @@
             this.lblAge.BackColor = System.Drawing.Color.Transparent;
             this.lblAge.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAge.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblAge.Location = new System.Drawing.Point(27, 262);
+            this.lblAge.Location = new System.Drawing.Point(29, 327);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(53, 28);
             this.lblAge.TabIndex = 10;
@@ -184,9 +188,9 @@
             this.txtAge.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAge.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAge.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtAge.Location = new System.Drawing.Point(32, 293);
+            this.txtAge.Location = new System.Drawing.Point(33, 358);
             this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(200, 24);
+            this.txtAge.Size = new System.Drawing.Size(416, 24);
             this.txtAge.TabIndex = 11;
             // 
             // lblCountry
@@ -219,7 +223,7 @@
             this.lblAccountInfoTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblAccountInfoTitle.Font = new System.Drawing.Font("Sitka Subheading Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAccountInfoTitle.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblAccountInfoTitle.Location = new System.Drawing.Point(165, 337);
+            this.lblAccountInfoTitle.Location = new System.Drawing.Point(165, 421);
             this.lblAccountInfoTitle.Name = "lblAccountInfoTitle";
             this.lblAccountInfoTitle.Size = new System.Drawing.Size(52, 23);
             this.lblAccountInfoTitle.TabIndex = 14;
@@ -231,7 +235,7 @@
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblUsername.Location = new System.Drawing.Point(27, 352);
+            this.lblUsername.Location = new System.Drawing.Point(27, 436);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(54, 28);
             this.lblUsername.TabIndex = 15;
@@ -243,7 +247,7 @@
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblPassword.Location = new System.Drawing.Point(27, 413);
+            this.lblPassword.Location = new System.Drawing.Point(27, 497);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(54, 28);
             this.lblPassword.TabIndex = 16;
@@ -255,7 +259,7 @@
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtUsername.Location = new System.Drawing.Point(32, 383);
+            this.txtUsername.Location = new System.Drawing.Point(32, 467);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(417, 24);
             this.txtUsername.TabIndex = 17;
@@ -266,7 +270,7 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtPassword.Location = new System.Drawing.Point(32, 444);
+            this.txtPassword.Location = new System.Drawing.Point(32, 528);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(417, 24);
             this.txtPassword.TabIndex = 18;
@@ -274,7 +278,7 @@
             // btnSignUp
             // 
             this.btnSignUp.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignUp.Location = new System.Drawing.Point(342, 481);
+            this.btnSignUp.Location = new System.Drawing.Point(342, 565);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(107, 42);
             this.btnSignUp.TabIndex = 19;
@@ -282,13 +286,39 @@
             this.btnSignUp.UseVisualStyleBackColor = true;
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
+            // cboRole
+            // 
+            this.cboRole.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cboRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboRole.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboRole.ForeColor = System.Drawing.SystemColors.Window;
+            this.cboRole.FormattingEnabled = true;
+            this.cboRole.Location = new System.Drawing.Point(32, 293);
+            this.cboRole.Name = "cboRole";
+            this.cboRole.Size = new System.Drawing.Size(200, 31);
+            this.cboRole.TabIndex = 20;
+            // 
+            // lblRole
+            // 
+            this.lblRole.AutoSize = true;
+            this.lblRole.BackColor = System.Drawing.Color.Transparent;
+            this.lblRole.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRole.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblRole.Location = new System.Drawing.Point(30, 262);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(52, 28);
+            this.lblRole.TabIndex = 21;
+            this.lblRole.Text = "label1";
+            // 
             // frmSignup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::pryGauna_IEFI.Properties.Resources.pexels_luna_lovegood_4087272;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(793, 544);
+            this.ClientSize = new System.Drawing.Size(841, 619);
+            this.Controls.Add(this.lblRole);
+            this.Controls.Add(this.cboRole);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
@@ -309,6 +339,7 @@
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.lblTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSignup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Deskly: Sign Up";
@@ -340,5 +371,7 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnSignUp;
+        private System.Windows.Forms.ComboBox cboRole;
+        private System.Windows.Forms.Label lblRole;
     }
 }
