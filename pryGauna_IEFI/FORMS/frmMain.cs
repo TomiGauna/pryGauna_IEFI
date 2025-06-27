@@ -26,19 +26,17 @@ namespace pryGauna_IEFI
         {
             InitializeComponent();
             conn.Open();
-            auditForm = new frmAudit(conn);
-            infoForm = new frmUsersInfos(conn);
-            updateForm = new frmUpdate(conn);
-            deleteForm = new frmDelete(conn);
         }
 
         private void auditoriesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            auditForm = new frmAudit(conn);
             auditForm.Show();
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            lblWelcome.Text = "Welcome back to the dashboard!";
             btnLogout.Text = "Log Out";
             loginTime = DateTime.Now;
 
@@ -71,16 +69,19 @@ namespace pryGauna_IEFI
 
         private void usersToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            infoForm = new frmUsersInfos(conn);
             infoForm.Show();
         }
 
         private void updateUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            updateForm = new frmUpdate(conn);
             updateForm.Show();
         }
 
         private void deleteUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            deleteForm = new frmDelete(conn);
             deleteForm.Show();
         }
 

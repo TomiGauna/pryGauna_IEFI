@@ -30,6 +30,8 @@ namespace pryGauna_IEFI
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            lblAppTitle.Text = "Welcome to Deskly!";
+            lblAppDesc.Text = "Created to make your life easier";
             lblTitle.Text = "LOGIN";
             lblUsername.Text = "Username";
             lblPassword.Text = "Password";
@@ -69,6 +71,8 @@ namespace pryGauna_IEFI
                         );
                 }
             }
+            txtUsername.Text = string.Empty;
+            txtPassword.Text = string.Empty;
         }
 
         private void lblRegisterHere_Click(object sender, EventArgs e)

@@ -123,6 +123,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -137,6 +138,35 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Images\nrd-c3tNiAb098I-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\juzzepo-vcee2hRsjl0-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\patrick-tomasso-gMes5dNykus-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\coffee-1276784_640.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\pexels-marceloverfe-14513839.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\pexels-kindelmedia-7054734.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\pexels-pixabay-434337 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\mario-gogh-VBLHICVh-lI-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\pexels-luna-lovegood-4087272.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\leone-venter-VieM9BdZKFo-unsplash.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
